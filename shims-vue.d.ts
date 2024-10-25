@@ -1,6 +1,7 @@
+/* eslint-disable ts/no-empty-object-type */
 declare module '*.vue' {
-  import type { ComponentOptions } from 'vue'
+  import type { DefineComponent } from 'vue'
 
-  const component: ComponentOptions<{}, {}, object, object> // 根据需要使用 'object' 或 'unknown'
+  const component: DefineComponent<{}, {}, any>
   export default component
 }
