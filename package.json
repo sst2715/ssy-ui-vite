@@ -1,7 +1,7 @@
 {
-  "name": "ssy-ui-vite",
+  "name": "ssy-ui-vite-leilei",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -52,5 +52,9 @@
     "cz-customizable": {
       "config": ".cz-config.cjs"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
