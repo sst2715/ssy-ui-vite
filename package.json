@@ -1,9 +1,9 @@
 {
-  "name": "ssy-ui-vite",
+  "name": "ssy-ui-vite-leilei",
   "type": "module",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "version": "1.0.1",
+  "description": "A Vite project for UI development",
+  "author": "你的名字或组织名称",
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
@@ -16,7 +16,8 @@
     "docs:serve": "vitepress serve docs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "vite preview"
   },
   "dependencies": {
     "@unocss/vite": "^0.63.4",
@@ -52,5 +53,12 @@
     "cz-customizable": {
       "config": ".cz-config.cjs"
     }
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ]
 }
