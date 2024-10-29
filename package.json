@@ -6,17 +6,32 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.js",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/entry.d.ts",
+      "import": "./dist/ssy-ui.js",
+      "require": "./dist/ssy-ui.umd.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/ssy-ui.umd.cjs",
+  "module": "./dist/ssy-ui.js",
+  "types": "./dist/entry.d.ts",
+  "files": ["dist"],
+ 
   "scripts": {
     "test": "vitest",
     "dev": "vite",
-    "build": "vite build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:all": "vite build",
+    "build:components": "tsx ./scripts/build.ts",
+    "build": "pnpm build:components && tsc -b tsconfig.types.json"
   },
   "dependencies": {
     "@unocss/vite": "^0.63.4",
@@ -24,6 +39,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
+    "@types/node": "^22.7.4",
+    "fs-extra": "^11.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "tsx": "^4.19.1",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@iconify-json/ic": "^1.2.1",
