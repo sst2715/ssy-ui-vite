@@ -17,6 +17,7 @@
   },
   "main": "./dist/ssy-ui.umd.cjs",
   "module": "./dist/ssy-ui.js",
+  "homepage": "https://ssy-ui-vite-leilei.vercel.app/",
   "types": "./dist/entry.d.ts",
   "files": ["dist"],
 
