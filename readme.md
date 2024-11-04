@@ -4,10 +4,7 @@
 
 <h1 align="center">SSY-UI-VITE</h1>
 
-<p align="center">
-  基于 Vite 栈的前端工程化实践 
-</p>
-
+<p align="center">基于 Vite 栈的前端工程化实践</p>
 <p align="center">
   <img src="https://img.shields.io/github/license/sst2715/ssy-ui-vite">
 </p>
